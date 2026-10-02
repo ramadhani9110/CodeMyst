@@ -74,6 +74,7 @@ const lessons: Lesson[] = [
 ];
 
 type PracticeQuestion = {
+  difficulty: "Easy" | "Medium" | "Hard";
   question: string;
   explanation: string;
   options: string[];
@@ -82,6 +83,7 @@ type PracticeQuestion = {
 
 const practiceQuestions: PracticeQuestion[] = [
   {
+    difficulty: "Easy",
     question: "Which one is the variable name?",
     options: ["18", "age", "100", "25"],
     correctAnswer: "age",
@@ -89,6 +91,7 @@ const practiceQuestions: PracticeQuestion[] = [
       "Correct! In age = 18, 'age' is the variable name and 18 is the stored value.",
   },
   {
+   difficulty: "Easy",  
     question: 'In name = "Alex", what is the stored value?',
     options: ["name", "Alex", "=", "variable"],
     correctAnswer: "Alex",
@@ -96,11 +99,20 @@ const practiceQuestions: PracticeQuestion[] = [
       'Correct! "Alex" is the value stored inside the variable name.',
   },
   {
+    difficulty: "Medium",
     question: "What is the latest value of age?",
     options: ["18", "19", "20", "21"],
     correctAnswer: "20",
     explanation:
       "Correct! The last assignment is age = 20, so the latest value is 20.",
+  },
+    {
+    difficulty: "Hard",
+    question: "Which variable contains the player's number of coins?",
+    options: ["playerName", "level", "coins", "player"],
+    correctAnswer: "coins",
+    explanation:
+      "Correct! In playerName, level, and coins, the variable 'coins' stores the player's coin count.",
   },
 ];
 
@@ -469,6 +481,6 @@ export default function Home() {
           </section>
         )}
       </div>
-    </main>
+    </main> 
   );
 }
